@@ -7,4 +7,4 @@ fibs1 :: [Integer]
 fibs1 = map fib [0..]
 
 fibs2 :: [Integer]
-fibs2 = map head $ iterate (\[x, y] -> [y, x+y]) [0,1]
+fibs2 = map fst $ iterate (\(x, y) -> (y, x+y)) (0,1)
